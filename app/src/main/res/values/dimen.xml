@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="heightTab">72dp</dimen>
+    <dimen name="spacerIcon">10dp</dimen>
+    <dimen name="spacerText">16dp</dimen>
+</resources>

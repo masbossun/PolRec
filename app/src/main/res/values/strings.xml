@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PolRec</string>
+    <string name="pol">Polar</string>
+    <string name="rec">Rectangular</string>
+</resources>
