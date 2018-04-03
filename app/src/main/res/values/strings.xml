@@ -1,5 +1,15 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">PolRec</string>
     <string name="pol">Polar</string>
     <string name="rec">Rectangular</string>
+
+    <string name="calculatePol">%1$s <xliff:g id="angle">\u2220</xliff:g> %2$s<xliff:g id="degree">\u00B0</xliff:g></string>
+    <string name="x_value">X Value</string>
+    <string name="y_value">Y Value</string>
+    <string name="calculateButton">calculate</string>
+    <string name="r_value">R Value</string>
+    <string name="degree_value"><xliff:g id="phi">\u03D5</xliff:g> Value</string>
+    <string name="calculateRecPositive">%1$s <xliff:g id="plus">\u002B</xliff:g> J%2$s</string>
+    <string name="calculateRecNegative">%1$s <xliff:g id="minus">\u002D</xliff:g> J%2$s</string>
+
 </resources>

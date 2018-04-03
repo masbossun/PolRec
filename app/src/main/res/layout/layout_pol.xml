@@ -1,71 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
+    >
 
-    <LinearLayout
-        android:id="@+id/editTextContainer"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="1"
-        android:layout_centerHorizontal="true">
+        android:layout_height="wrap_content">
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/valX"
-            android:layout_margin="10dp"
-            android:layout_weight=".5"
-            android:hint="X Value"
+            android:hint="@string/x_value"
+            android:inputType="number|numberSigned|numberDecimal"
             />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/valY"
-            android:layout_margin="10dp"
-            android:layout_weight=".5"
-            android:hint="Y Value"
+            android:hint="@string/y_value"
+            android:inputType="number|numberSigned|numberDecimal"
             />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewContainer"
-        android:orientation="horizontal"
-        android:layout_below="@id/viewCalculate"
-        android:layout_margin="20dp"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/viewHasilR"
-            android:layout_marginBottom="20dp"
-            android:layout_margin="20dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/viewHasilDeg"
-            android:layout_marginBottom="20dp"
-            android:layout_margin="20dp" />
-
-    </LinearLayout>
-
+    </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/viewCalculate"
-        android:layout_below="@id/editTextContainer"
-        android:layout_centerHorizontal="true"
+        android:text="@string/calculateButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:padding="20dp"
         />
 
 
-</RelativeLayout>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewHasil"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+
+
+</LinearLayout>

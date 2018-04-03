@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.support.annotation.MainThread
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
+import android.support.v7.view.ContextThemeWrapper
+import android.text.InputType
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -14,27 +16,29 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import java.lang.Math.pow
+import java.math.BigDecimal
+import java.util.zip.Inflater
 import kotlin.math.sqrt
 
 
 class PolActivity : Fragment(){
 
-    private var textViewR: TextView? = null
-    private var textViewDeg: TextView? = null
+    private var textView: TextView? = null
     private var xValue: EditText? = null
     private var yValue: EditText? = null
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater!!.inflate(R.layout.layout_pol, container, false)
 
-        textViewR = view.findViewById<View>(R.id.viewHasilR) as TextView
-        textViewDeg = view.findViewById<View>(R.id.viewHasilDeg) as TextView
+        textView = view.findViewById<View>(R.id.viewHasil) as TextView
         xValue = view.findViewById<View>(R.id.valX) as EditText
         yValue = view.findViewById<View>(R.id.valY) as EditText
 
         val button = view.findViewById<View>(R.id.viewCalculate) as Button
         button.setOnClickListener(
-                View.OnClickListener { buttonClicked(view) }
+                View.OnClickListener {
+                    buttonClicked(view)
+                }
         )
 
         return view
@@ -51,15 +55,25 @@ class PolActivity : Fragment(){
         return deg
     }
 
-    fun buttonClicked(view: View){
+    private fun buttonClicked(view: View){
         val xVal = xValue?.text.toString()
         val yVal = yValue?.text.toString()
 
-        val calR = calculateR(xVal, yVal)
-        val calDeg = calculateDeg(xVal, yVal)
+        val calR = calculateR(xVal, yVal).toString()
+        val calDeg = calculateDeg(xVal, yVal).toString()
 
-        textViewR?.setText(calR.toString())
-        textViewDeg?.setText(calDeg.toString())
+        if (calR.length >= 15 && calDeg.length >= 15){
+            val newCalR = calR.substring(0, 15)
+            val newCalDeg = calDeg.substring(0, 15)
+            textView?.setText(
+                    getString(R.string.calculatePol, newCalR, newCalDeg)
+            )
+        }else{
+            textView?.setText(
+                    getString(R.string.calculatePol, calR, calDeg)
+            )
+        }
+
     }
 
     companion object {

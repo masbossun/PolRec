@@ -2,6 +2,7 @@ package com.masbossun.ryansetiagi.polrec
 
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         val actionBar = supportActionBar
         actionBar!!.setDisplayHomeAsUpEnabled(true)
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_black_24dp)
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp)
 
         mDrawerLayout = findViewById(R.id.drawer_layout)
 
