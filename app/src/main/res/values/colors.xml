@@ -3,4 +3,5 @@
     <color name="colorPrimaryPol">#FFC107</color>
     <color name="colorPrimaryDarkPol">#C79100</color>
     <color name="colorAccentPol">#ff9800</color>
+    <color name="textColor">#f1f1f1</color>
 </resources>

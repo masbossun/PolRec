@@ -12,4 +12,14 @@
     <string name="calculateRecPositive">%1$s <xliff:g id="plus">\u002B</xliff:g> J%2$s</string>
     <string name="calculateRecNegative">%1$s <xliff:g id="minus">\u002D</xliff:g> J%2$s</string>
 
+    <string name="convertion">Conversion</string>
+    <string name="note">Note : <br/> - Konversi menggunakan mode Deg <br/>- Hasil tidak dibulatkan, hanya dipotong maks. 15 angka</string>
+    <string name="license">
+
+    </string>
+    <string name="about">About</string>
+    <string name="to_polar">to Polar</string>
+    <string name="to_rectangular">to Rectangular</string>
+    <string name="firstVal">1<sub>st</sub> Value</string>
+    <string name="secondVal">2<sub>nd</sub> Value</string>
 </resources>
