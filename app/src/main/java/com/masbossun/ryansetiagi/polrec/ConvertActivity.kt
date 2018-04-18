@@ -3,10 +3,11 @@ package com.masbossun.ryansetiagi.polrec
 import android.os.Bundle
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
+import android.text.TextUtils
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_convert.*
 
 class ConvertActivity : AppCompatActivity(){
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,9 +15,24 @@ class ConvertActivity : AppCompatActivity(){
         toolbar.setTitleTextColor(ContextCompat.getColor(applicationContext, R.color.textColor))
         setSupportActionBar(toolbar)
 
-
-        rectangularButton.setOnClickListener { toRec() }
-        polarButton.setOnClickListener { toPol() }
+        rectangularButton.setOnClickListener {
+            val firstText = firstVal.text.toString()
+            val secondText = secondVal.text.toString()
+            if (TextUtils.isEmpty(firstText) && TextUtils.isEmpty(secondText)){
+                Toast.makeText(applicationContext, "Kolom harus diisi", Toast.LENGTH_SHORT).show()
+            }else{
+                toRec()
+            }
+        }
+        polarButton.setOnClickListener {
+            val firstText = firstVal.text.toString()
+            val secondText = secondVal.text.toString()
+            if (TextUtils.isEmpty(firstText) && TextUtils.isEmpty(secondText)){
+                Toast.makeText(applicationContext, "Kolom harus diisi", Toast.LENGTH_SHORT).show()
+            }else{
+                toPol()
+            }
+        }
 
     }
 
