@@ -20,6 +20,7 @@ class ConvertActivity : AppCompatActivity(){
             val secondText = secondVal.text.toString()
             if (TextUtils.isEmpty(firstText) && TextUtils.isEmpty(secondText)){
                 Toast.makeText(applicationContext, "Kolom harus diisi", Toast.LENGTH_SHORT).show()
+                viewHasil.setText(null)
             }else{
                 toRec()
             }
@@ -29,6 +30,7 @@ class ConvertActivity : AppCompatActivity(){
             val secondText = secondVal.text.toString()
             if (TextUtils.isEmpty(firstText) && TextUtils.isEmpty(secondText)){
                 Toast.makeText(applicationContext, "Kolom harus diisi", Toast.LENGTH_SHORT).show()
+                viewHasil.setText(null)
             }else{
                 toPol()
             }
